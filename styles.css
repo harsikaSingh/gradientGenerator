@@ -1,20 +1,25 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
-    font-family: "Lora", serif;
+    height: 100%; /* Ensure the html and body elements take up full height */
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
     background-image: linear-gradient(to right, #17f47b, #2241ea);
     display: flex;
-    flex-direction: column; /* Change to column direction */
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-    color: white;
+    height: 100vh; /* Ensure the body height is 100vh */
     padding-top: 150px;
+    color: white;
+    overflow: hidden; /* Prevent scrolling if content exceeds the viewport height */
 }
 
 h1 {
     font-size: 36px;
     color: #fff;
-    margin: 20px 0 40px 0; /* Add margin for spacing */
+    margin: 20px 0 50px 0; /* Add margin for spacing */
     animation: popOut 1s ease-in-out;
 }
 
@@ -45,7 +50,7 @@ button {
 }
 
 button:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: #a4a2a1;
 }
 
 .copyCode {
