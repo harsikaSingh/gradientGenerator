@@ -1,13 +1,21 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: linear-gradient(to right, rgb(23,244,123), rgb(34,65,234));
+    font-family: "Lora", serif;
+    background-image: linear-gradient(to right, #17f47b, #2241ea);
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Change to column direction */
     align-items: center;
     height: 100vh;
     color: white;
+    padding-top: 150px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #fff;
+    margin: 20px 0 40px 0; /* Add margin for spacing */
+    animation: popOut 1s ease-in-out;
 }
 
 section {
@@ -16,6 +24,12 @@ section {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+section:hover {
+    transform: scale(1.05); /* Slightly scale up */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
 }
 
 button {
@@ -48,4 +62,27 @@ h2 {
     margin-top: 20px;
     font-size: 18px;
     color: #ddd;
+    font-style: italic;
+}
+
+@keyframes popOut {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: Slide in from below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End position */
+    }
 }
